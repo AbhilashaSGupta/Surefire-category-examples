@@ -5,7 +5,7 @@ Group Hiearchy:
           ATests             BTests          CTests
       ____/  |  \______   ____/                /
      /       |         \ /                    /
- AaTests    AbTests   ABTests                /
+ AaTests    AbTests   AbTests                /
               \_____________   _____________/
                             \ /
                           AbCTests
@@ -17,7 +17,7 @@ onlnyInAllTest    AllTests
 ATest             ATests
 BTest             BTests
 CTest             CTests
-ABTest            ABTests
+ABTest            AbTests
 ABTest2           BTests ATests
 AaTest            AaTests
 AbTest            AbTests
@@ -36,11 +36,11 @@ ABTest
 ABTest2
 AbCTest
 
-$ mvn verify -Dtest.group="eu.janinko.test.category.ATests && eu.janinko.test.category.BTests"
+$ mvn verify -Dtest.group="ninja.abhilasha.test.category.ATests && ninja.abhilasha.test.category.BTests"
 ABTest
 ABTest2
 
-$ mvn verify -Dtest.group='eu.janinko.test.category.AllTests && !eu.janinko.test.category.CTests'
+$ mvn verify -Dtest.group='ninja.abhilasha.test.category.AllTests && !ninja.abhilasha.test.category.CTests'
 onlnyInAllTest
 ATest
 AaTest
@@ -49,14 +49,14 @@ ABTest
 ABTest2
 BTest
 
-$ mvn verify -Dtest.group='eu.janinko.test.category.CTests || !eu.janinko.test.category.ATests'
+$ mvn verify -Dtest.group='ninja.abhilasha.test.category.CTests || !ninja.abhilasha.test.category.ATests'
 CTest
 AbCTest
 everytimeTest
 onlyInAllTest
 BTest
 
-$ mvn verify -Dtest.exgroup="eu.janinko.test.category.CTests"
+$ mvn verify -Dtest.exgroup="ninja.abhilasha.test.category.CTests"
 ATest
 AaTest
 AbTest

@@ -1,4 +1,4 @@
-package eu.janinko.test.category;
+package ninja.abhilasha.test.category;
 
 import org.junit.experimental.categories.Category;
 

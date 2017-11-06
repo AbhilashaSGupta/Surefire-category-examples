@@ -1,21 +1,20 @@
-package eu.janinko.test;
+package ninja.abhilasha.test;
 
+import ninja.abhilasha.test.category.AbTests;
+import ninja.abhilasha.test.category.WholeClassTests;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
-import eu.janinko.test.category.ATests;
-import eu.janinko.test.category.ABTests;
-import eu.janinko.test.category.AaTests;
-import eu.janinko.test.category.AbTests;
-import eu.janinko.test.category.AbCTests;
-import eu.janinko.test.category.AllTests;
-import eu.janinko.test.category.BTests;
-import eu.janinko.test.category.CTests;
-import eu.janinko.test.category.StandaloneTests;
-import eu.janinko.test.category.WholeClassTests;
+import ninja.abhilasha.test.category.ATests;
+import ninja.abhilasha.test.category.AaTests;
+import ninja.abhilasha.test.category.AbCTests;
+import ninja.abhilasha.test.category.AllTests;
+import ninja.abhilasha.test.category.BTests;
+import ninja.abhilasha.test.category.CTests;
+import ninja.abhilasha.test.category.StandaloneTests;
 
 @Category(WholeClassTests.class)
-public class TestTestCategory {
+public class TestCategory {
 	
 	@Test
 	@Category(AllTests.class)
@@ -42,7 +41,7 @@ public class TestTestCategory {
 	}
 	
 	@Test
-	@Category(ABTests.class)
+	@Category(AbTests.class)
 	public void ABTest(){
 		System.out.println("ABTest");
 	}

@@ -7,7 +7,7 @@
 	<name>TestTestCategory</name>
 	<description>TestTestCategory</description>
 	<properties>
-		<test.group>eu.janinko.test.category.ATests</test.group>
+		<test.group>ninja.abhilasha.test.ATests</test.group>
 		<test.exgroup></test.exgroup>
 	</properties>
 
@@ -17,6 +17,12 @@
 			<artifactId>junit</artifactId>
 			<version>4.8.1</version>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
 		</dependency>
 	</dependencies>
 
@@ -34,7 +40,6 @@
 				</dependencies>
 				<configuration>
 					<groups>${test.group}</groups>
-					<dryrun>true</dryrun>
 					<excludedGroups>${test.exgroup}</excludedGroups>
 				</configuration>
 				<executions>
@@ -75,6 +80,14 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
